@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DC5BE9028AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5BE8F28AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift */; };
+		9DC5BE9228AEAD2A00CA8106 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5BE9128AEAD2A00CA8106 /* CharacterViewController.swift */; };
 		B38CB62F28AE655F006EBDDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB62E28AE655F006EBDDC /* AppDelegate.swift */; };
 		B38CB63128AE655F006EBDDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB63028AE655F006EBDDC /* SceneDelegate.swift */; };
 		B38CB63328AE655F006EBDDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB63228AE655F006EBDDC /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DC5BE8F28AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsiPowersCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DC5BE9128AEAD2A00CA8106 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		B38CB62B28AE655F006EBDDC /* PsychonautsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychonautsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38CB62E28AE655F006EBDDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38CB63028AE655F006EBDDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B38CB63228AE655F006EBDDC /* MainViewController.swift */,
+				9DC5BE9128AEAD2A00CA8106 /* CharacterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */,
+				9DC5BE8F28AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,8 +205,10 @@
 				B38CB64728AE65D9006EBDDC /* NetworkManager.swift in Sources */,
 				B38CB63328AE655F006EBDDC /* MainViewController.swift in Sources */,
 				B38CB64A28AE66E3006EBDDC /* Character.swift in Sources */,
+				9DC5BE9228AEAD2A00CA8106 /* CharacterViewController.swift in Sources */,
 				B38CB62F28AE655F006EBDDC /* AppDelegate.swift in Sources */,
 				B38CB63128AE655F006EBDDC /* SceneDelegate.swift in Sources */,
+				9DC5BE9028AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

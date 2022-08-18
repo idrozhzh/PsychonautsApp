@@ -3,6 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -77,10 +80,93 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Psychonauts" id="HGb-S4-qgs"/>
+                    <connections>
+                        <segue destination="zaj-IN-37Y" kind="show" id="Uqw-1q-Nzt"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34K-Gh-ota" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="93.75"/>
         </scene>
+        <!--Character View Controller-->
+        <scene sceneID="e06-EM-6wo">
+            <objects>
+                <viewController id="zaj-IN-37Y" customClass="CharacterViewController" customModule="PsychonautsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="31Z-en-w5I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oyL-wT-vR9">
+                                <rect key="frame" x="16" y="140" width="382" height="380"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KsL-rr-9Zo">
+                                <rect key="frame" x="16" y="545" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSA-e1-AHA">
+                                <rect key="frame" x="16" y="581" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-ps-ZxX">
+                                <rect key="frame" x="16" y="617" width="382" height="225"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="56P-IV-RYh">
+                                    <size key="itemSize" width="69" height="69"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="psiPowerCell" id="VUB-Fl-M0W" customClass="PsiPowersCollectionViewCell" customModule="PsychonautsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cZ0-U4-V8u">
+                                            <rect key="frame" x="0.0" y="0.0" width="69" height="69"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="69" height="69"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="znA-hT-HYn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="znA-hT-HYn" firstAttribute="trailing" secondItem="Ti7-ps-ZxX" secondAttribute="trailing" constant="16" id="3lV-JN-mLz"/>
+                            <constraint firstItem="znA-hT-HYn" firstAttribute="bottom" secondItem="Ti7-ps-ZxX" secondAttribute="bottom" constant="20" id="4PK-5O-sIU"/>
+                            <constraint firstItem="sSA-e1-AHA" firstAttribute="leading" secondItem="znA-hT-HYn" secondAttribute="leading" constant="16" id="7Xw-hl-FPn"/>
+                            <constraint firstItem="KsL-rr-9Zo" firstAttribute="top" secondItem="oyL-wT-vR9" secondAttribute="bottom" constant="25" id="7kc-QX-EKA"/>
+                            <constraint firstItem="znA-hT-HYn" firstAttribute="trailing" secondItem="sSA-e1-AHA" secondAttribute="trailing" constant="16" id="FAc-pg-mgL"/>
+                            <constraint firstItem="znA-hT-HYn" firstAttribute="trailing" secondItem="oyL-wT-vR9" secondAttribute="trailing" constant="16" id="FRn-rG-d8g"/>
+                            <constraint firstItem="oyL-wT-vR9" firstAttribute="top" secondItem="znA-hT-HYn" secondAttribute="top" id="IaY-Iy-JOJ"/>
+                            <constraint firstItem="Ti7-ps-ZxX" firstAttribute="top" secondItem="sSA-e1-AHA" secondAttribute="bottom" constant="15" id="Jx3-ZU-pYD"/>
+                            <constraint firstItem="sSA-e1-AHA" firstAttribute="top" secondItem="KsL-rr-9Zo" secondAttribute="bottom" constant="15" id="Kds-XO-wcO"/>
+                            <constraint firstItem="znA-hT-HYn" firstAttribute="trailing" secondItem="KsL-rr-9Zo" secondAttribute="trailing" constant="16" id="L0g-x1-wEx"/>
+                            <constraint firstItem="oyL-wT-vR9" firstAttribute="leading" secondItem="znA-hT-HYn" secondAttribute="leading" constant="16" id="O0b-Vc-TZv"/>
+                            <constraint firstItem="KsL-rr-9Zo" firstAttribute="leading" secondItem="znA-hT-HYn" secondAttribute="leading" constant="16" id="QAw-Tu-OKr"/>
+                            <constraint firstItem="oyL-wT-vR9" firstAttribute="height" secondItem="31Z-en-w5I" secondAttribute="height" multiplier="0.424107" id="UtD-MD-zPg"/>
+                            <constraint firstItem="Ti7-ps-ZxX" firstAttribute="leading" secondItem="znA-hT-HYn" secondAttribute="leading" constant="16" id="jrn-fh-GIV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PNK-2a-fLY"/>
+                    <connections>
+                        <outlet property="characterImageView" destination="oyL-wT-vR9" id="GA9-o5-w2p"/>
+                        <outlet property="genderLabel" destination="sSA-e1-AHA" id="9SB-Xr-Q3n"/>
+                        <outlet property="nameLabel" destination="KsL-rr-9Zo" id="TRQ-xR-uHR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RuG-8W-88I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737.68115942028987" y="93.75"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

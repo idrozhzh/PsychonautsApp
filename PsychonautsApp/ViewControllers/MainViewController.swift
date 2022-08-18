@@ -29,6 +29,10 @@ class MainViewController: UICollectionViewController {
         return cell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+    }
+    
     private func fetchCharacters() {
         NetworkManager.shared.fetchData { result in
             switch result {
