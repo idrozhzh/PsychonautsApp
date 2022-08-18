@@ -26,7 +26,6 @@ class NetworkManager {
             completion(.failure(.invalidURL))
             return
         }
-        
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 completion(.failure(.noData))
@@ -43,6 +42,25 @@ class NetworkManager {
                 completion(.failure(.decodingError))
                 print(error.localizedDescription)
             }
-        }
+        }.resume()
     }
+    
+    func fetchImage(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(data))
+            }
+        }.resume()
+    }
+    
 }

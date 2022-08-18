@@ -14,7 +14,26 @@ class CharacterCollectionViewCell: UICollectionViewCell {
     
     func setupCell(with character: Character) {
         characterLabel.text = character.name
-        image.image = UIImage(named: "Image")
+        fetchImage(with: character.img, completion: { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.image.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+    }
+    
+    private func fetchImage(with url: String, completion: @escaping(Result<UIImage, Error>) -> Void) {
+        NetworkManager.shared.fetchImage(from: url) { result in
+            switch result {
+            case .success(let image):
+                guard let uiImage = UIImage(data: image) else { return }
+                completion(.success(uiImage))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
     
 }
