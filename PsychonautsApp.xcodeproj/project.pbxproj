@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		B38CB62F28AE655F006EBDDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB62E28AE655F006EBDDC /* AppDelegate.swift */; };
 		B38CB63128AE655F006EBDDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB63028AE655F006EBDDC /* SceneDelegate.swift */; };
-		B38CB63328AE655F006EBDDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB63228AE655F006EBDDC /* ViewController.swift */; };
+		B38CB63328AE655F006EBDDC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB63228AE655F006EBDDC /* MainViewController.swift */; };
 		B38CB63628AE655F006EBDDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38CB63428AE655F006EBDDC /* Main.storyboard */; };
 		B38CB63828AE6561006EBDDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38CB63728AE6561006EBDDC /* Assets.xcassets */; };
 		B38CB63B28AE6561006EBDDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38CB63928AE6561006EBDDC /* LaunchScreen.storyboard */; };
+		B38CB64728AE65D9006EBDDC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64628AE65D9006EBDDC /* NetworkManager.swift */; };
+		B38CB64A28AE66E3006EBDDC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64928AE66E3006EBDDC /* Character.swift */; };
+		B38CB64D28AE70F6006EBDDC /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B38CB62B28AE655F006EBDDC /* PsychonautsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PsychonautsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38CB62E28AE655F006EBDDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38CB63028AE655F006EBDDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B38CB63228AE655F006EBDDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B38CB63228AE655F006EBDDC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B38CB63528AE655F006EBDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B38CB63728AE6561006EBDDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38CB63A28AE6561006EBDDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B38CB63C28AE6561006EBDDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B38CB64628AE65D9006EBDDC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B38CB64928AE66E3006EBDDC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,66 @@
 		B38CB62D28AE655F006EBDDC /* PsychonautsApp */ = {
 			isa = PBXGroup;
 			children = (
-				B38CB62E28AE655F006EBDDC /* AppDelegate.swift */,
-				B38CB63028AE655F006EBDDC /* SceneDelegate.swift */,
-				B38CB63228AE655F006EBDDC /* ViewController.swift */,
-				B38CB63428AE655F006EBDDC /* Main.storyboard */,
+				B38CB64B28AE70D7006EBDDC /* Views */,
+				B38CB64828AE66D6006EBDDC /* Models */,
+				B38CB64528AE65C8006EBDDC /* Sources */,
+				B38CB64228AE6577006EBDDC /* App */,
+				B38CB64328AE6594006EBDDC /* ViewControllers */,
+				B38CB64428AE65B4006EBDDC /* Storyboards */,
 				B38CB63728AE6561006EBDDC /* Assets.xcassets */,
-				B38CB63928AE6561006EBDDC /* LaunchScreen.storyboard */,
-				B38CB63C28AE6561006EBDDC /* Info.plist */,
 			);
 			path = PsychonautsApp;
+			sourceTree = "<group>";
+		};
+		B38CB64228AE6577006EBDDC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB62E28AE655F006EBDDC /* AppDelegate.swift */,
+				B38CB63028AE655F006EBDDC /* SceneDelegate.swift */,
+				B38CB63C28AE6561006EBDDC /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B38CB64328AE6594006EBDDC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB63228AE655F006EBDDC /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B38CB64428AE65B4006EBDDC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB63428AE655F006EBDDC /* Main.storyboard */,
+				B38CB63928AE6561006EBDDC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B38CB64528AE65C8006EBDDC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB64628AE65D9006EBDDC /* NetworkManager.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B38CB64828AE66D6006EBDDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB64928AE66E3006EBDDC /* Character.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B38CB64B28AE70D7006EBDDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38CB63328AE655F006EBDDC /* ViewController.swift in Sources */,
+				B38CB64D28AE70F6006EBDDC /* CharacterCollectionViewCell.swift in Sources */,
+				B38CB64728AE65D9006EBDDC /* NetworkManager.swift in Sources */,
+				B38CB63328AE655F006EBDDC /* MainViewController.swift in Sources */,
+				B38CB64A28AE66E3006EBDDC /* Character.swift in Sources */,
 				B38CB62F28AE655F006EBDDC /* AppDelegate.swift in Sources */,
 				B38CB63128AE655F006EBDDC /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DUXW7U8H93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PsychonautsApp/Info.plist;
+				INFOPLIST_FILE = PsychonautsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DUXW7U8H93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PsychonautsApp/Info.plist;
+				INFOPLIST_FILE = PsychonautsApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
