@@ -17,11 +17,13 @@ enum NetworkError: Error {
 class NetworkManager {
     static let shared = NetworkManager()
     
+    private let link = "https://psychonauts-api.herokuapp.com/api/characters"
+    
     private init() {}
     
     func fetchData(completion: @escaping(Result<[Character], NetworkError>) -> Void) {
         guard
-            let url = URL(string: "https://psychonauts-api.herokuapp.com/api/characters")
+            let url = URL(string: link)
         else {
             completion(.failure(.invalidURL))
             return
@@ -45,12 +47,7 @@ class NetworkManager {
         }.resume()
     }
     
-    func fetchImage(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        guard let url = URL(string: url) else {
-            completion(.failure(.invalidURL))
-            return
-        }
-        
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else {
                 print(error?.localizedDescription ?? "No error description")

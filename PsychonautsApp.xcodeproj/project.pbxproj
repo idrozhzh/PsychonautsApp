@@ -18,6 +18,9 @@
 		B38CB64728AE65D9006EBDDC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64628AE65D9006EBDDC /* NetworkManager.swift */; };
 		B38CB64A28AE66E3006EBDDC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64928AE66E3006EBDDC /* Character.swift */; };
 		B38CB64D28AE70F6006EBDDC /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */; };
+		B38CB65128AFB9EF006EBDDC /* PsiPowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CB65028AFB9EF006EBDDC /* PsiPowerViewController.swift */; };
+		B3CE69B628B0DE97008F48EF /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE69B528B0DE97008F48EF /* ImageCacheManager.swift */; };
+		B3CE69B828B113C1008F48EF /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CE69B728B113C1008F48EF /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B38CB64628AE65D9006EBDDC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B38CB64928AE66E3006EBDDC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		B38CB64C28AE70F6006EBDDC /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		B38CB65028AFB9EF006EBDDC /* PsiPowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsiPowerViewController.swift; sourceTree = "<group>"; };
+		B3CE69B528B0DE97008F48EF /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		B3CE69B728B113C1008F48EF /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			children = (
 				B38CB63228AE655F006EBDDC /* MainViewController.swift */,
 				9DC5BE9128AEAD2A00CA8106 /* CharacterViewController.swift */,
+				B38CB65028AFB9EF006EBDDC /* PsiPowerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				B38CB64628AE65D9006EBDDC /* NetworkManager.swift */,
+				B3CE69B528B0DE97008F48EF /* ImageCacheManager.swift */,
+				B3CE69B728B113C1008F48EF /* ImageManager.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -203,11 +212,14 @@
 			files = (
 				B38CB64D28AE70F6006EBDDC /* CharacterCollectionViewCell.swift in Sources */,
 				B38CB64728AE65D9006EBDDC /* NetworkManager.swift in Sources */,
+				B3CE69B628B0DE97008F48EF /* ImageCacheManager.swift in Sources */,
 				B38CB63328AE655F006EBDDC /* MainViewController.swift in Sources */,
+				B38CB65128AFB9EF006EBDDC /* PsiPowerViewController.swift in Sources */,
 				B38CB64A28AE66E3006EBDDC /* Character.swift in Sources */,
 				9DC5BE9228AEAD2A00CA8106 /* CharacterViewController.swift in Sources */,
 				B38CB62F28AE655F006EBDDC /* AppDelegate.swift in Sources */,
 				B38CB63128AE655F006EBDDC /* SceneDelegate.swift in Sources */,
+				B3CE69B828B113C1008F48EF /* ImageManager.swift in Sources */,
 				9DC5BE9028AEAC5700CA8106 /* PsiPowersCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

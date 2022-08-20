@@ -18,28 +18,33 @@ class MainViewController: UICollectionViewController {
     
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Characters count:", characters.count)
         return characters.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "characterCell", for: indexPath) as! CharacterCollectionViewCell
         let character = characters[indexPath.row]
+        cell.character = character
         cell.setupCell(with: character)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        prepare(for: <#T##UIStoryboardSegue#>, sender: <#T##Any?#>)
+        performSegue(withIdentifier: "characterView", sender: characters[indexPath.row])
     }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let characterVC = segue.destination as? CharacterViewController else { return }
+        guard let selectedCharacter = sender as? Character else { return }
+        characterVC.character = selectedCharacter
+    }
+
     private func fetchCharacters() {
-        NetworkManager.shared.fetchData { result in
+        NetworkManager.shared.fetchData { [weak self] result in
             switch result {
             case .success(let characters):
-                self.characters = characters
-                self.collectionView.reloadData()
-                print("Success")
+                self?.characters = characters
+                self?.collectionView.reloadData()
             case .failure(let error):
                 print(error)
             }
