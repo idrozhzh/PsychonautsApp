@@ -9,10 +9,10 @@ struct Character: Codable {
     let gender: String
     let img: String
     let name: String
-    let psiPowers: [PsiPowers]
+    let psiPowers: [PsiPower]
 }
 
-struct PsiPowers: Codable {
+struct PsiPower: Codable {
     let description: String
     let img: String
     let name: String

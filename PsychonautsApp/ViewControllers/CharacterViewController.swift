@@ -57,4 +57,15 @@ extension CharacterViewController: UICollectionViewDelegate, UICollectionViewDel
             height: CGFloat(125)
         )
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "psiPowerSegue", sender: character.psiPowers[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let psiPowerVC = segue.destination as? PsiPowerViewController else { return }
+        guard let psiPower = sender as? PsiPower else { return }
+        
+        psiPowerVC.psiPower = psiPower
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 class PsiPowersCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var psiImageView: UIImageView!
 
-    func setupCell(with psiPower: PsiPowers) {
+    func setupCell(with psiPower: PsiPower) {
         ImageManager.shared.getImage(with: psiPower.img, completion: { [weak self] result in
             switch result {
             case .success(let image):

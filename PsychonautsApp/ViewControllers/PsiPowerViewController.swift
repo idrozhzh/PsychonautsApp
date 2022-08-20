@@ -9,21 +9,29 @@ import UIKit
 
 class PsiPowerViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var powerImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var psiPower: PsiPower!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupView() {
+        nameLabel.text = psiPower.name
+        descriptionLabel.text = psiPower.description
+        
+        ImageManager.shared.getImage(with: psiPower.img, completion: { [weak self] result in
+            switch result {
+            case .success(let image):
+                self?.powerImageView.image = image
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
     }
-    */
-
 }

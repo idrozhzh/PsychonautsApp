@@ -30,7 +30,7 @@ class MainViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "characterView", sender: characters[indexPath.row])
+        performSegue(withIdentifier: "characterSegue", sender: characters[indexPath.row])
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
